@@ -5,21 +5,39 @@ var Greeter = React.createClass({
                         message: 'This is default message'
                 }
         },
+        getInitialState:function(){
+                return {
+                        name: this.props.name
+                };
+        },
         onButtonClick: function(e){
                 e.preventDefault();
 
-                var name = this.refs.name.value;
+                var nameRef = this.refs.name;
 
-                alert(name);
+                // var name = this.refs.name.value;
+                var name = nameRef.value;
+
+                // this.state.name = name;
+                // ini bila ingin mengosongkan form input
+                // this.refs.name.value = '';
+                nameRef.name.value = '';
+
+                this.setState({
+                        name:name
+                })
+
+
+                // alert(name);
         },
     render: function(){
-            var name = this.props.name;
+            var name = this.state.name;
             var message = this.props.message;
         return(
           <div>
             <h1>Hello {name}</h1>
             <p>{message + '!!'}</p>
-            
+
             <form onSubmit={this.onButtonClick}>
                     <input type="text" ref="name"/>
                     <button>Set Name</button>
