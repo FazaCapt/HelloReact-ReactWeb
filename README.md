@@ -3,7 +3,7 @@ Hello React
 1. Creating Your Web Server 11:38
 2. Hello React! 8:22
 3. Atom Editor Plugins (Optional) 3:22
-4. react-3-4-first-component.zip
+4. Your First React Component
 5. Learning JSX 5:43
 6. Component Properties 8:47
 7. User Events & Callbacks 6:19
